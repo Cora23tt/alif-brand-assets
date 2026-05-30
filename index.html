@@ -207,11 +207,11 @@
 
         .section {
             position: relative;
-            padding: 80px 0;
+            padding: 64px 0;
         }
 
         .hero + .section {
-            padding-top: 40px;
+            padding-top: 32px;
         }
 
         .section-head {
@@ -253,23 +253,27 @@
         }
 
         .asset-rail {
+            --rail-gap: 24px;
+            --rail-top: 18px;
             position: relative;
-            min-height: 596px;
+            height: auto;
+            min-height: calc((var(--rail-logo-size) * 2.5) + var(--rail-gap) + var(--rail-gap) + var(--rail-top));
             border: 0;
             overflow: visible;
             background: transparent;
             display: grid;
             align-content: start;
-            gap: 24px;
-            padding-top: 18px;
+            gap: var(--rail-gap);
+            padding-top: var(--rail-top);
         }
 
         .hero + .section .asset-rail {
-            transform: translateY(clamp(-260px, calc(88vh - 900px), -110px));
+            margin-top: clamp(-260px, calc(88vh - 900px), -110px);
         }
 
         .core-asset-rail {
-            min-height: 964px;
+            height: auto;
+            min-height: calc(var(--rail-logo-size) + var(--rail-logo-size) + var(--rail-logo-size) + var(--rail-logo-size) + var(--rail-gap) + var(--rail-gap) + var(--rail-gap) + var(--rail-gap) + var(--rail-top));
         }
 
         .rail-logo {
@@ -296,6 +300,10 @@
 
         .rail-logo svg {
             fill: currentColor;
+        }
+
+        .rail-logo + .rail-logo {
+            margin-top: calc(var(--rail-logo-size) * -0.25);
         }
 
         .rail-logo.second {
@@ -492,7 +500,7 @@
         }
 
         .usage {
-            padding: 80px 0;
+            padding: 64px 0;
             background: var(--dark);
             color: white;
         }
@@ -838,16 +846,11 @@
             }
 
             .asset-rail {
-                min-height: 472px;
-                gap: 20px;
-            }
-
-            .core-asset-rail {
-                min-height: 738px;
+                --rail-gap: 20px;
             }
 
             .hero + .section .asset-rail {
-                transform: translateY(clamp(-160px, calc(74vh - 700px), -76px));
+                margin-top: clamp(-160px, calc(74vh - 700px), -76px);
             }
 
             .rail-logo {
@@ -949,7 +952,11 @@
             }
 
             .section {
-                padding: 56px 0;
+                padding: 44px 0;
+            }
+
+            .usage {
+                padding: 44px 0;
             }
 
             .site-footer {
@@ -1011,17 +1018,12 @@
             }
 
             .asset-rail {
-                min-height: 316px;
-                gap: 14px;
-                padding-top: 16px;
-            }
-
-            .core-asset-rail {
-                min-height: 412px;
+                --rail-gap: 14px;
+                --rail-top: 16px;
             }
 
             .hero + .section .asset-rail {
-                transform: translateY(clamp(-460px, calc(100vh - 1004px), -160px));
+                margin-top: clamp(-460px, calc(100vh - 1004px), -160px);
             }
 
             .rail-logo {
@@ -1061,7 +1063,7 @@
             }
 
             .hero + .section .asset-rail {
-                transform: translateY(clamp(-560px, calc(100vh - 1120px), -360px));
+                margin-top: clamp(-560px, calc(100vh - 1120px), -360px);
             }
         }
     </style>
@@ -1201,19 +1203,19 @@
                         </div>
 
                         <div class="download-buttons">
-                            <a class="download-button main" href="assets/alif-symbol-green.svg" download>
+                            <a class="download-button main" href="assets/alif-core-symbols-svg.zip" download>
                                 <svg class="download-icon" aria-hidden="true">
                                     <use href="#download-icon"></use>
                                 </svg>
-                                <span>SVG</span>
+                                <span>SVG set</span>
                             </a>
-                            <a class="download-button" href="assets/alif-symbol-green.png" download>
+                            <a class="download-button" href="assets/alif-core-symbols-png.zip" download>
                                 <svg class="download-icon" aria-hidden="true">
                                     <use href="#download-icon"></use>
                                 </svg>
-                                <span>PNG</span>
+                                <span>PNG set</span>
                             </a>
-                            <a class="download-button" href="assets/alif-symbol-green.zip" download>
+                            <a class="download-button" href="assets/alif-core-symbols.zip" download>
                                 <svg class="download-icon" aria-hidden="true">
                                     <use href="#download-icon"></use>
                                 </svg>
